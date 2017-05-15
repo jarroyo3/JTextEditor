@@ -53,12 +53,16 @@ public class FindDialog extends JFrame implements ActionListener {
 			find();
 			replace();
 		} else if (e.getSource() == btnReplaceAll) {
-			do {
-				find();
-				replace();
-            }while(mainTextArea.getText().contains(textFind.getText()));
-		}
+			if (mainTextArea.getText().length() > 0) {
+				do {
+					find();
+					replace();
+				} while (mainTextArea.getText().contains(textFind.getText()));
 
+			} else {
+				JOptionPane.showMessageDialog(null, "No text found");
+			}
+		}
 	}
 
 	private void replace() {
