@@ -12,15 +12,9 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.EventObject;
-import java.util.HashMap;
 import java.util.Scanner;
 
-import javax.swing.AbstractAction;
-import javax.swing.Action;
 import javax.swing.BorderFactory;
-import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
@@ -34,16 +28,12 @@ import javax.swing.KeyStroke;
 import javax.swing.ScrollPaneConstants;
 import javax.swing.WindowConstants;
 import javax.swing.text.DefaultEditorKit;
-import javax.swing.text.Highlighter;
-
-import com.sun.media.jfxmedia.events.NewFrameEvent;
 
 public class UI extends JFrame implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel backgroundPanel;
 	private JTextArea mainTextArea;;
-	private Highlighter highlighter;
 	private JMenuItem newFile, openFile, saveFile, saveAsFile, cut, copy,
 			paste, selectAll, find, findAndReplace;
 	private JFileChooser openFileChoose;

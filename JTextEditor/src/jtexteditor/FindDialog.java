@@ -1,8 +1,6 @@
 package jtexteditor;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -13,7 +11,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-import javax.swing.WindowConstants;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultHighlighter;
 import javax.swing.text.Highlighter;
@@ -29,8 +26,6 @@ public class FindDialog extends JFrame implements ActionListener {
 	private int windowWidth = 400;
 	private int windowHeight = 150;
 	private int keepSearch;
-	private JPanel backgroundPanel;
-
 	private boolean isFindAndReplace;
 	private Highlighter highlighter;
 
@@ -106,7 +101,7 @@ public class FindDialog extends JFrame implements ActionListener {
 	private void init() {
 		String title = "Find";
 
-		backgroundPanel = new JPanel();
+		new JPanel();
 		labelFind = new JLabel("Find:");
 		labelFindAndReplace = new JLabel("Replace:");
 		textFind = new JTextField(30);
