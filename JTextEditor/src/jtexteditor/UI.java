@@ -55,8 +55,10 @@ public class UI extends JFrame implements ActionListener {
 				try {
 					Scanner scan = new Scanner(new FileReader(openFileChoose
 							.getSelectedFile().getPath()));
-					while (scan.hasNext())
+					while (scan.hasNext()) {
 						mainTextArea.append(scan.nextLine() + "\n");
+					}
+					scan.close();
 				} catch (Exception e1) {
 					System.out.println(e1.getMessage());
 				}
