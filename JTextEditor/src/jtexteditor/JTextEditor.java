@@ -1,7 +1,9 @@
 package jtexteditor;
 
-public class JTextEditor{
+import jtexteditor.controller.EditorController;
+
+public class JTextEditor {
 	public static void main(String[] args) {
-		new UI().init();
+		new EditorController();
 	}
 }
